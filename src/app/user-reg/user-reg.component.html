@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Register Here
+            </div>
+            <!-- <div class="card-body">
+                <form #frmReg="ngForm">
+                    Full Name :
+                    <input type="text" [(ngModel)]="name" name="name" class="form-control"  #perinfo="ngModel" pattern="^[a-zA-Z]" required />
+
+                    <div *ngIf="perinfo.touched && perinfo.invalid" class="alert alert-danger">
+                        <p *ngIf="perinfo.errors.required">User full name is required</p>
+                        <p *ngIf="perinfo.errors.pattern">Enter only alphabets</p>
+                    </div>
+                    Gender:
+                    <input type="radio"  [(ngModel)]="gender" name="gender" value="Male" #rdogender="ngModel" required />Male
+                    <input type="radio"  [(ngModel)]="gender" name="gender"  value="Female" #rdogender="ngModel" required />Female
+                    <br />
+                    <div *ngIf="rdogender.touched && rdogender.invalid" class="alert alert-danger">
+                        <p *ngIf="rdogender.errors.required">Gender is required</p>            
+                    </div>
+                    Username :
+                    <input type="text" [(ngModel)]="username" name="username" class="form-control"  #uname="ngModel"  minlength="5" pattern="^[a-zA-Z]*$" required />
+
+                    <div *ngIf="uname.touched && uname.invalid" class="alert alert-danger">
+                        <p *ngIf="uname.errors.required">Username is required</p>
+                        <p *ngIf="uname.errors.minlength">Username min  required 5 chars</p>
+                        <p *ngIf="uname.errors.pattern">Only Alphabets</p>
+                    </div>
+                    Password:
+                    <input type="password" [(ngModel)]="pwd" name="pwd" class="form-control"  #upwd="ngModel"  minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" required />
+
+                    <div *ngIf="upwd.touched && upwd.invalid" class="alert alert-danger">
+                        <p *ngIf="upwd.errors.required">Password is required</p>
+                        <p *ngIf="upwd.errors.minlength">Password min  required 8 chars</p>
+                        <p *ngIf="upwd.errors.pattern">Enter Password in desired pattern</p>
+                    </div>
+
+                <input type="submit"  value="Reg Here" class="btn btn-primary"        
+                (click) = "SaveValues(frmReg)"/>
+                <br />
+                <p style="color:green" [innerHTML]="tblinfo"></p>
+                <br />
+                <p style="text-align:center;width: 100%;">
+                    <a routerLink="/userLogin">Already user login here</a>
+                </p>
+            </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3"></div>
+</div>
+ -->

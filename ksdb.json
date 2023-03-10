@@ -1,0 +1,44 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin1",
+      "password": "pwd@123"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "pwd@123"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Sample User1",
+      "username": "user1",
+      "password": "pwd@123"
+    },
+    {
+      "id": 2,
+      "fullname": "Sample User2",
+      "username": "user2",
+      "password": "pwd@123"
+    }
+  ],
+  "products": [
+    {
+      "prodid": 101,
+      "prodname": "aloo paratha",
+      "description": "stuffed spicy mashed potato filled with flat bread",
+      "prodprice": 50,
+      "available": "yes"
+    },
+    {
+      "prodid": 102,
+      "prodname": "chickpea salad",
+      "description": "cucumber,onion,tomato and boiled chickpea mixed salad with olive oil and soya sauce dressing",
+      "prodprice": 80,
+      "available": "yes"
+    }
+  ]
+}
