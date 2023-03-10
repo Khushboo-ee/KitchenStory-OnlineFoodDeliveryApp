@@ -10,30 +10,37 @@ import { LoginService } from '../login.service';
   styleUrls: ['./user-reg.component.css']
 })
 export class UserRegComponent implements OnInit {
-  // msg:any;
-  // router: Router;
-  // name:string="";
-  // gender:string="";
-  // username:string="";
-  // pwd:string="";
-
+ 
+msg:any;
   constructor(
-    // private builder:Builder,
-    // private service:LoginService
+    private builder :FormBuilder, 
+    private service : LoginService, 
+    private router:Router
   ) { }
 
   ngOnInit(): void {
   }
-  // SaveValues(frmReg:any){
-  //   if(frmReg.valid){
-  //     this.service.CreateNewUser(frmReg.value).subscribe(data=>{
-  //       alert("user registered");
-  //     });
-  //   }
-  //   else{
-  //     this.msg="Invalid form";
-  //   }
+  userRegForm = this.builder.group(
+    {
+      fullname: this.builder.control('', Validators.required),
+      contact: this.builder.control('', Validators.required),
+      username: this.builder.control('', Validators.required),
+      id: this.builder.control('', Validators.required),
+      password: this.builder.control('', Validators.required)
+    });
 
-  // }
-
+    proceedRegister()
+    {
+      if(this.userRegForm.valid)
+      {
+        this.service.CreateNewUser(this.userRegForm.value).subscribe(data=>{
+          alert("User Registered");
+          this.router.navigate(['userLogin']);
+        });
+      }
+      else
+      {
+        this.msg = "Invalid Form";
+      }
+    }
 }

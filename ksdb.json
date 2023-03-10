@@ -1,27 +1,50 @@
 {
   "admin": [
     {
-      "id": 1,
+      "id": "admin1",
       "username": "admin1",
       "password": "pwd@123"
     },
     {
-      "id": 2,
+      "id": "admin2",
       "username": "admin2",
       "password": "pwd@123"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "user1",
       "fullname": "Sample User1",
+      "contact": 9898989898,
       "username": "user1",
       "password": "pwd@123"
     },
     {
-      "id": 2,
+      "id": "user2",
       "fullname": "Sample User2",
+      "contact": 9090909090,
       "username": "user2",
+      "password": "pwd@123"
+    },
+    {
+      "id": "user3",
+      "fullname": "Sample User3",
+      "contact": 8888989898,
+      "username": "user3",
+      "password": "pwd@123"
+    },
+    {
+      "fullname": "mahalaxmi",
+      "contact": 8787878787,
+      "username": "laxmi1",
+      "password": "pwd@123",
+      "id": "670b7149-f5e7-4f12-8afa-a844eb4878ca"
+    },
+    {
+      "fullname": "Dev laxmi",
+      "contact": 7878787878,
+      "username": "laxmi2",
+      "id": "laxmi2",
       "password": "pwd@123"
     }
   ],

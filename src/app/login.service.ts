@@ -31,8 +31,8 @@ export class LoginService {
     return this.http.get(this.apiUrlAdmin);
   }
 
-  GetAdminById(username:any){
-    return this.http.get(this.apiUrlAdmin + '/' + username);
+  GetAdminById(id:any){
+    return this.http.get(this.apiUrlAdmin + '/' + id);
   }
   
   //Products

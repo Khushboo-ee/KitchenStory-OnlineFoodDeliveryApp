@@ -3,7 +3,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <p>User Login</p>
+                <p>Admin Login</p>
             </div>
             <div class="card-body">
                 <form [formGroup] = "adminloginForm" (ngSubmit)="proceedLogin()">
@@ -11,7 +11,7 @@
                 <input type="text" formControlName="username" class="form-control" />
                 <br />
                 Password:
-                <input type="text" formControlName="password" class="form-control" />
+                <input type="password" formControlName="password" class="form-control" />
                 <br />
                 <div>
                     <input type="submit" value="Login" class="btn btn-success" />
