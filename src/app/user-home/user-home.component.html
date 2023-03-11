@@ -19,23 +19,33 @@
                         <!-- <th>Image</th> -->
                         <th>Operations</th>
                     </tr>
-                    <tr *ngFor="let p of prodinfo">
-                        <td>{{p.prodid}}</td>
-                        <td>{{p.prodname}}</td>
-                        <td>{{p.description}}</td>
-                        <td>{{p.prodprice}}</td>
-                        <td>{{p.available}}</td>
-                        <!-- <td><img src="/src/assets/images/bg1.jpg"></td> -->
-                        <td>
-                            <input type="button"  value="Add to Cart"  class="btn btn-primary" />
-                        </td>
-                    </tr>
-
-
+                  
+                        <!-- <tr *ngIf="product" >
+                            <td>{{product.prodid}}</td>
+                            <td>{{product.prodname}}</td>
+                            <td>{{product.description}}</td>
+                            <td>{{product.prodprice}}</td>
+                            <td>{{product.available}}</td>
+                        </tr> -->
+                        <tr *ngFor="let p of prodinfo" >
+                            <td>{{p.prodid}}</td>
+                            <td>{{p.prodname}}</td>
+                            <td>{{p.description}}</td>
+                            <td>{{p.prodprice | currency:"INR":"symbol"}}</td>
+                            <td>{{p.available}}</td>
+                            <!-- <td><img src="/src/assets/images/bg1.jpg"></td> -->
+                            <td>
+                                <input type="button"  value="Add to Cart"  class="btn btn-primary" (click)="AddToCart(product)" />
+                            </td>
+                        </tr>   
                 </table>
+
+                <a routerLink="/cart" class="button fancy-button">
+                    <i class="material-icons">GoToCart_</i>Checkout
+                  </a>
             </div>
         </div>
-        <!-- (click)="AddToCart(p.id)" -->
+        <!-- (click)="AddToCart(product)" -->
 
     </div>
     <div class="col-md-2"></div>

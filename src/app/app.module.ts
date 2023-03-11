@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewUsersComponent } from './view-users/view-users.component';
 import { ViewProductsComponent } from './view-products/view-products.component';
 import { ChangePwdComponent } from './change-pwd/change-pwd.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ChangePwdComponent } from './change-pwd/change-pwd.component';
     CartComponent,
     ViewUsersComponent,
     ViewProductsComponent,
-    ChangePwdComponent
+    ChangePwdComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

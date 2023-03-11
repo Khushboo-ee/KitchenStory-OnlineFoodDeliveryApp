@@ -16,7 +16,7 @@ export class AppComponent implements DoCheck{
     let currentUrl = this.router.url;
     console.log(currentUrl);
     
-    if(currentUrl=="/userLogin" || currentUrl=="/userReg" || currentUrl=="/adminLogin" || currentUrl=="/adminHome"|| currentUrl=="/userHome" || currentUrl=="/viewProd" || currentUrl=="/viewUser" || currentUrl=="/adminChngPwd")
+    if(currentUrl=="/userLogin" || currentUrl=="/userReg" || currentUrl=="/adminLogin" || currentUrl=="/adminHome"|| currentUrl=="/userHome" || currentUrl=="/viewProd" || currentUrl=="/viewUser" || currentUrl=="/adminChngPwd"|| currentUrl=="/paymentGateway")
     {
       this.isNavbarVisible = false;
     }

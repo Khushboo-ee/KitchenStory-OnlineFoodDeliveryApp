@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from '../products';
 import { LoginService } from '../login.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Users } from '../users';
+import { CartService} from '../cart.service';
+
 
 @Component({
   selector: 'app-user-home',
@@ -14,7 +17,11 @@ export class UserHomeComponent implements OnInit {
   prodname:any;
   id:string;
   pa:number=1;
-  constructor(private service:LoginService) { }
+  user:Users;
+  constructor(
+    private service:LoginService, 
+    private cartservice:CartService, 
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.service.ViewAllProdinfo().subscribe(data=>{
@@ -44,11 +51,9 @@ export class UserHomeComponent implements OnInit {
     this.reverse= !this.reverse;
   }
 
-  // AddToCart()
-  // {
-  //   this.service.deleteProd(id).subscribe(data=>{
-  //     console.log(data);
-  //     this.service.ViewAllProdinfo();
-  //   });
-  // }
+  AddToCart(product:Products)
+  {
+   this.cartservice.addToCart(product);
+   window.alert('Your product has been added to the cart!');
+  }
 }

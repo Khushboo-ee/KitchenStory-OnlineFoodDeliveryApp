@@ -61,8 +61,8 @@ export class LoginService {
     return this.http.get<Products[]>(this.apiUrlProd);
   }
 
-  GetProductById(prodid:any){
-    return this.http.get(this.apiUrlProd + '/' + prodid);
+  GetProductById(id:string){
+    return this.http.get<Products>(`${this.apiUrlProd}/${id}`);
   }
 
    updateProducts(prodid:number, prod:Products):Observable<Object>{

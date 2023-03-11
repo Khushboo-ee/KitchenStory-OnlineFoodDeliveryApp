@@ -6,6 +6,7 @@ import { AdminGuard } from './admin.guard';
 import { CartComponent } from './cart/cart.component';
 import { ChangePwdComponent } from './change-pwd/change-pwd.component';
 import { HomeComponent } from './home/home.component';
+import { PaymentComponent } from './payment/payment.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:"userHome",component:UserHomeComponent,canActivate:[UserGuard]},
   {path:"viewUser", component:ViewUsersComponent},
   {path:"viewProd", component:ViewProductsComponent},
-  {path:"adminChngPwd", component:ChangePwdComponent}
+  {path:"adminChngPwd", component:ChangePwdComponent},
+  {path:"paymentGateway", component:PaymentComponent}
 ];
 
 @NgModule({
