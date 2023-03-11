@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="card">
+            <div class="card-header" style="text-align:center">
+                <h2>Registered users master list</h2>
+            </div>
+            <div class="card-body">
+                <input type="text"  [(ngModel)]="fullname"  class="form-control" (ngModelChange)="Search()"  placeholder="enter user details to search" />
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th (click)="sort('id')">User Id&nbsp;<i class="fa fa-sort"></i></th>
+                        <th (click)="sort('fullname')">User Name&nbsp;<i class="fa fa-sort"></i></th>
+                        <th (click)="sort('conact')">Contact No&nbsp;<i class="fa fa-sort"></i></th>
+                        <th (click)="sort('username')">Username&nbsp;<i class="fa fa-sort"></i></th>
+                        
+                    </tr>
+                    <tr  *ngFor="let u of userinfo">
+                        <td>{{u.id}}</td>
+                        <td>{{u.fullname}}</td>
+                        <td>{{u.contact}}</td>
+                        <td>{{u.username}}</td>
+                    </tr>
+
+                    <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    *ngFor="let u of userinfo | orderBy : key : reverse | paginate:{itemsPerPage:3,currentPage:pa}" -->
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+

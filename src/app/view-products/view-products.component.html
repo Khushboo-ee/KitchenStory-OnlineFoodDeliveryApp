@@ -4,7 +4,7 @@
 
         <div class="card">
             <div class="card-header" style="text-align:center">
-                <h2>Products available to purchase</h2>
+                <h2>Available products master list</h2>
             </div>
             <div class="card-body">
                 <input type="text"  [(ngModel)]="prodname"  class="form-control" (ngModelChange)="Search()"  placeholder="enter product details to search" />
@@ -16,7 +16,6 @@
                         <th (click)="sort('description')">Product Description&nbsp;<i class="fa fa-sort"></i></th>
                         <th (click)="sort('prodprice')">Product Price&nbsp;<i class="fa fa-sort"></i></th>
                         <th (click)="sort('available')">Is Available&nbsp;<i class="fa fa-sort"></i></th>
-                        <!-- <th>Image</th> -->
                         <th>Operations</th>
                     </tr>
                     <tr *ngFor="let p of prodinfo">
@@ -25,19 +24,22 @@
                         <td>{{p.description}}</td>
                         <td>{{p.prodprice}}</td>
                         <td>{{p.available}}</td>
-                        <!-- <td><img src="/src/assets/images/bg1.jpg"></td> -->
                         <td>
-                            <input type="button"  value="Add to Cart"  class="btn btn-primary" />
+                            <input type="button"  value="Delete"  class="btn btn-danger" (click)="deleteProductDetails(p.prodid)"/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="button"  value="Modify"  class="btn btn-primary"  />
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     </tr>
 
-
+                    <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> 
+                    *ngFor="let p of prodinfo | orderBy : key : reverse | paginate:{itemsPerPage:3,currentPage:pa}"
+                (click)="updateEmpDetails(p.prodid)"-->
                 </table>
             </div>
         </div>
-        <!-- (click)="AddToCart(p.id)" -->
+
 
     </div>
     <div class="col-md-2"></div>
 </div>
-

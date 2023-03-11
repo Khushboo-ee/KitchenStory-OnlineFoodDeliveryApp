@@ -50,7 +50,7 @@
   ],
   "products": [
     {
-      "prodid": 101,
+      "id": 101,
       "prodname": "aloo paratha",
       "description": "stuffed spicy mashed potato filled with flat bread",
       "prodprice": 50,
@@ -62,6 +62,22 @@
       "description": "cucumber,onion,tomato and boiled chickpea mixed salad with olive oil and soya sauce dressing",
       "prodprice": 80,
       "available": "yes"
+    },
+    {
+      "prodid": 103,
+      "prodname": "mushroom soup",
+      "description": "sweet and sour creamy soup with chopped and roasted mushroom",
+      "prodprice": 150,
+      "available": "yes",
+      "id": "69abc9f9-ab13-4674-9a46-c28751c8087b"
+    },
+    {
+      "prodid": 104,
+      "prodname": "chocolate trifle",
+      "description": "eggless soft and creamy chocolate flavoured layered pastry",
+      "prodprice": 100,
+      "available": "yes",
+      "id": "92eb6f9f-4825-42f7-a88e-96e336fbde93"
     }
   ]
 }

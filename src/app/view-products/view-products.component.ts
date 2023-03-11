@@ -4,16 +4,16 @@ import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: './user-home.component.html',
-  styleUrls: ['./user-home.component.css']
+  selector: 'app-view-products',
+  templateUrl: './view-products.component.html',
+  styleUrls: ['./view-products.component.css']
 })
-export class UserHomeComponent implements OnInit {
+export class ViewProductsComponent implements OnInit {
 
   prodinfo:Products[] = [];
   prodname:any;
-  id:string;
   pa:number=1;
+
   constructor(private service:LoginService) { }
 
   ngOnInit(): void {
@@ -44,11 +44,11 @@ export class UserHomeComponent implements OnInit {
     this.reverse= !this.reverse;
   }
 
-  // AddToCart()
-  // {
-  //   this.service.deleteProd(id).subscribe(data=>{
-  //     console.log(data);
-  //     this.service.ViewAllProdinfo();
-  //   });
-  // }
+  deleteProductDetails(id:number)
+  {
+    this.service.deleteProd(id).subscribe(data=>{
+      console.log(data);
+      this.service.ViewAllProdinfo();
+    });
+  }
 }

@@ -3,20 +3,22 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <p>User Login</p>
+                <p>Admin update password</p>
             </div>
             <div class="card-body">
-                <form [formGroup] = "userloginForm" (ngSubmit)="proceedLogin()">
+                <form [formGroup] = "adminUpdateForm" (ngSubmit)="proceedUpdate()">
                 Username:
                 <input type="text" formControlName="username" class="form-control" />
                 <br />
                 Password:
-                <input type="password" formControlName="password" class="form-control" />
+                <input type="text" formControlName="password" class="form-control" />
+                <br />
+                Confirm password:
+                <input type="password" formControlName="passwordChk" class="form-control" />
                 <br />
                 <div>
-                    <input type="submit" value="Login" class="btn btn-success" />
-                   &nbsp;&nbsp;
-                   <a routerLink="/userReg">New user register here!</a>
+                    <input type="submit" value="Update" class="btn btn-success" />
+                   
                 </div>
                 <div>
                     <p>{{msg}}</p>

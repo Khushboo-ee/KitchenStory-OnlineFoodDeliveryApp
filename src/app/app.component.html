@@ -1,4 +1,5 @@
 <div class="bgimg">
+  <div *ngIf="isNavbarVisible">
   <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">KitchenStory</a>
@@ -24,13 +25,15 @@
         </div>
       </div>
     </nav>
+  </div>
     <div class="row">
       <div class="col-md-12">
           <router-outlet></router-outlet>   
       </div>
     </div>
+ 
   </div>
   
     
-    <!-- *ngIf="isNavbarVisible" -->
+    <!--  -->
   

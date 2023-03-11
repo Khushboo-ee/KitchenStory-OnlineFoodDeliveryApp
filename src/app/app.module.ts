@@ -13,6 +13,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ViewUsersComponent } from './view-users/view-users.component';
+import { ViewProductsComponent } from './view-products/view-products.component';
+import { ChangePwdComponent } from './change-pwd/change-pwd.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserRegComponent,
     UserLoginComponent,
     UserHomeComponent,
-    CartComponent
+    CartComponent,
+    ViewUsersComponent,
+    ViewProductsComponent,
+    ChangePwdComponent
   ],
   imports: [
     BrowserModule,
